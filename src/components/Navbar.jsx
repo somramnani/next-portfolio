@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
 
 const links = [
   { url: "/", title: "Home" },
@@ -17,7 +18,7 @@ const Navbar = () => {
   };
   return (
     <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
-      <div className="hidden md:flex gap-4">
+      <div className="hidden md:flex gap-4 w-1/3">
         {links.map((link) => {
           return (
             <Link href={link.url} key={link.title}>
@@ -26,7 +27,8 @@ const Navbar = () => {
           );
         })}
       </div>
-      <div className="md:hidden">
+      {/* Logo */}
+      <div className="md:hidden lg:flex w-1/3 justify-center">
         <Link
           href="/"
           className="text-sm bg-black rounded-md p-1 font-semibold flex items-center justify-center"
@@ -37,7 +39,17 @@ const Navbar = () => {
           </span>
         </Link>
       </div>
-      <div className=""></div>
+      <div className="hidden md:flex gap-4 w-1/3">
+        <Link href="https://github.com/somramnani">
+          <Image src="/github.png" alt="" width={24} height={24} />
+        </Link>
+        <Link href="https://www.linkedin.com/in/som-ramnani-b1990b14b/">
+          <Image src="/linkedin.png" alt="" width={24} height={24} />
+        </Link>
+        <Link href="">
+          <Image src="/email.png" alt="" width={24} height={24} />
+        </Link>
+      </div>
 
       {/* Responsive Menu */}
       <div className="md:hidden">
