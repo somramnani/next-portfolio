@@ -90,14 +90,29 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="hidden md:flex gap-4 w-1/3">
-        <Link href="https://github.com/somramnani">
+        <Link
+          href="https://github.com/somramnani"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Image src="/github.png" alt="" width={24} height={24} />
         </Link>
-        <Link href="https://www.linkedin.com/in/som-ramnani-b1990b14b/">
+        <Link
+          href="https://www.linkedin.com/in/som-ramnani-b1990b14b/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Image src="/linkedin.png" alt="" width={24} height={24} />
         </Link>
         <Link href="">
-          <Image src="/email.png" alt="" width={24} height={24} />
+          <Image
+            src="/email.png"
+            alt=""
+            width={24}
+            height={24}
+            target="_blank"
+            rel="noopener noreferrer"
+          />
         </Link>
       </div>
 
