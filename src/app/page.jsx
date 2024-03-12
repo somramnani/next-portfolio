@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Homepage = () => {
   return (
@@ -26,20 +27,33 @@ const Homepage = () => {
           {/* Title */}
           <h1 className="text-4xl md:text-6xl font-bold">Welcome</h1>
           <p className="md:text-xl">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
+            Hey! My name is Som Ramnani and I am a Front End Developer. I have
+            an associates degree in web development and have also went to the
+            Rutgers Coding Bootcamp. I am currently a fellow at Formation which
+            is a competitive engineering Fellowship.
+          </p>
+
+          <p className="md:text-xl">
+            {" "}
+            I love writing code and problem solving. When I am not coding you
+            can find me either snowboarding, cooking or playing basketball! 🏂
+            👨‍🍳 🏀
+          </p>
+
+          <p className="md:text-xl">
+            {" "}
+            Feel free to reach out to me if you have any questions.
           </p>
           <div className="flex gap-4">
-            <button className="p-4 rounded-lg ring-1 ring-black bg-black text-white">
+            <Link
+              href="/portfolio"
+              className="p-4 rounded-lg ring-1 ring-black bg-black text-white"
+            >
               View My Work
-            </button>
-            <button className="p-4 rounded-lg ring-1 ring-black">
-              Contact Me
-            </button>
+            </Link>
+            <Link href="/contact" className="p-4 rounded-lg ring-1 ring-black">
+              Contact Me{" "}
+            </Link>
           </div>
         </div>
       </div>
