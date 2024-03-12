@@ -114,6 +114,19 @@ const Navbar = () => {
             rel="noopener noreferrer"
           />
         </Link>
+        <Link
+          href="https://olive-evania-12.tiiny.site"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src="/resume.jpeg"
+            alt=""
+            width={24}
+            height={24}
+            target="_blank"
+            rel="noopener noreferrer"
+          />
+        </Link>
       </div>
 
       {/* Responsive Menu */}
