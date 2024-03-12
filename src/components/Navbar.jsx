@@ -116,6 +116,7 @@ const Navbar = () => {
         </Link>
         <Link
           href="https://olive-evania-12.tiiny.site"
+          target="_blank"
           rel="noopener noreferrer"
         >
           <Image
