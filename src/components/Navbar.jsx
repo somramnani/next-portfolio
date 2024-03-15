@@ -104,7 +104,7 @@ const Navbar = () => {
         >
           <Image src="/linkedin.png" alt="" width={24} height={24} />
         </Link>
-        <Link href="">
+        <Link href="/contact">
           <Image
             src="/email.png"
             alt=""
