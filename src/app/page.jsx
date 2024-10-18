@@ -50,7 +50,7 @@ const Homepage = () => {
               som.ramnani@gmail.com
             </a>
           </p>
-          <div className="flex gap-4">
+          <div className="flex gap-4 pb-10">
             <Link
               href="/portfolio"
               className="p-4 rounded-lg ring-1 ring-black bg-black text-white"
