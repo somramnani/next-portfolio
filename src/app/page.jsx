@@ -42,7 +42,13 @@ const Homepage = () => {
 
           <p className="md:text-xl">
             {" "}
-            Feel free to reach out to me if you have any questions.
+            Feel free to reach out to me if you have any questions{" "}
+            <a
+              href="mailto:som.ramnani@gmail.com"
+              className="text-blue-500 underline"
+            >
+              som.ramnani@gmail.com
+            </a>
           </p>
           <div className="flex gap-4">
             <Link
@@ -51,9 +57,9 @@ const Homepage = () => {
             >
               View My Work
             </Link>
-            <Link href="/contact" className="p-4 rounded-lg ring-1 ring-black">
+            {/* <Link href="/contact" className="p-4 rounded-lg ring-1 ring-black">
               Contact Me{" "}
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
