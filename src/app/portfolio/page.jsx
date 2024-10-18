@@ -1,8 +1,8 @@
 "use client";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useRef } from "react";
+import { FaGithub, FaGlobe } from "react-icons/fa";
 
 const items = [
   {
@@ -17,28 +17,33 @@ const items = [
   {
     id: 2,
     color: "from-blue-300 to-violet-300",
-    title: "Restauraunt Manager",
+    title: "Restaurant Manager",
     desc: "An application where managers can track their employees and make reservations.",
     img: "/restaurant-employees.jpg",
     link: "https://manager-restaurant-4129383b2be4.herokuapp.com",
     github: "https://github.com/somramnani/RestaurantManager",
   },
-  // {
-  // //   id: 3,
-  // //   color: "from-violet-300 to-purple-300",
-  // //   title: "Vanilla Book App",
-  // //   desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-  // //   img: "/../../../public/DateNight.PNG",
-  // //   link: "https://lama.dev",
-  // // },
+  {
+    id: 3,
+    color: "from-blue-300 to-violet-300",
+    title: "Store",
+    desc: "This is a small store application built with React, TypeScript, and Vite. The application displays a store from a JSON file and allows users to add items to a cart.",
+    img: "/store.png",
+    link: "store-dusky-omega.vercel.app/",
+    github: "https://github.com/somramnani/store",
+  },
+  {
+    id: 4,
+    color: "from-blue-300 to-violet-300",
+    title: "2D Fighting Game",
+    desc: "The 2D Fighting Game is a two-player fighting game built using vanilla JavaScript and CSS. It features a simple yet engaging combat system where players can choose their characters and battle each other in a classic 2D arena.",
+    img: "/fighting-game-demo.png",
+    link: "https://github.com/somramnani/2d-fighting-game",
+    github: "fighting-game-psi.vercel.app",
+  },
 ];
 
 const PortfolioPage = () => {
-  const ref = useRef();
-
-  const { scrollYProgress } = useScroll({ target: ref });
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-80%"]);
-
   return (
     <motion.div
       className="h-full"
@@ -46,74 +51,51 @@ const PortfolioPage = () => {
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
-      <div className="h-[600vh] relative" ref={ref}>
-        <div className="w-screen h-[calc(100vh-6rem)] flex items-center justify-center text-8xl text-center">
-          Projects
-        </div>
-        <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
-          <motion.div style={{ x }} className="flex">
-            <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-r from-purple-300 to-red-300" />
-            {items.map((item) => (
-              <div
-                className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color}`}
-                key={item.id}
-              >
-                <div className="flex flex-col gap-8 text-white">
-                  <h1 className="text-xl font-bold md:text-4xl lg:text-6xl xl:text-8xl">
-                    {item.title}
-                  </h1>
-                  <div className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px]">
-                    <Image src={item.img} alt="" fill />
-                  </div>
-                  <p className="w-80 md:w96 lg:w-[500px] lg:text-lg xl:w-[600px]">
-                    {item.desc}
-                  </p>
-                  <div className="flex flex-row">
-                    <Link href={item.github} className="justify-end">
-                      <button className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">
-                        See Code
-                      </button>
-                    </Link>
-                    <Link href={item.link} className="justify-end">
-                      <button className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">
-                        See Website
-                      </button>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </motion.div>
-        </div>
-      </div>
-      <div className="w-screen h-screen flex flex-col gap-16 items-center justify-center text-center">
-        <h1 className="text-8xl">Do you have a project?</h1>
-        <div className="relative">
-          <motion.svg
-            animate={{ rotate: 360 }}
-            transition={{ duration: 8, ease: "linear", repeat: Infinity }}
-            viewBox="0 0 300 300"
-            className="w-64 h-64 md:w-[500px] md:h-[500px] "
+      <div className="w-screen min-h-screen p-8 flex flex-col gap-8">
+        <h1 className="text-center text-6xl font-bold mb-12">Projects</h1>
+
+        {/* Loop through each project */}
+        {items.map((item) => (
+          <div
+            key={item.id}
+            className="flex flex-col md:flex-row bg-white shadow-lg rounded-lg p-8 gap-8"
           >
-            <defs>
-              <path
-                id="circlePath"
-                d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "
+            {/* Left side: Image */}
+            <div className="w-full md:w-1/2">
+              <Image
+                src={item.img}
+                alt={item.title}
+                width={600}
+                height={400}
+                className="rounded-lg object-cover"
               />
-            </defs>
-            <text fill="#000">
-              <textPath xlinkHref="#circlePath" className="text-xl">
-                Front-end Developer
-              </textPath>
-            </text>
-          </motion.svg>
-          <Link
-            href="/contact"
-            className="w-16 h-16 md:w-28 md:h-28 absolute top-0 left-0 right-0 bottom-0 m-auto bg-black text-white rounded-full flex items-center justify-center"
-          >
-            Hire Me
-          </Link>
-        </div>
+            </div>
+
+            {/* Right side: Info */}
+            <div className="flex flex-col justify-center w-full md:w-1/2">
+              <h2 className="text-3xl font-bold text-gray-800 mb-4">
+                {item.title}
+              </h2>
+              <p className="text-gray-600 mb-6">{item.desc}</p>
+              <div className="flex gap-4">
+                <Link href={item.github} target="_blank">
+                  <button className="px-4 py-2 bg-gray-800 text-white rounded flex items-center gap-2">
+                    <FaGithub className="w-5 h-5" />{" "}
+                    {/* Adjust the icon size */}
+                    <span> GitHub</span>{" "}
+                    {/* Text will align next to the icon */}
+                  </button>
+                </Link>
+                <Link href={item.link} target="_blank">
+                  <button className="px-4 py-2 bg-blue-500 text-white rounded flex items-center gap-2">
+                    <FaGlobe className="w-5 h-5" /> {/* Globe Icon */}
+                    <span> Website</span>
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </motion.div>
   );
