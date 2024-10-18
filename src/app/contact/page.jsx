@@ -7,7 +7,6 @@ const ContactPage = () => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
   const text = "Say Hello";
-
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -69,18 +68,23 @@ const ContactPage = () => {
         >
           <span>Dear Som,</span>
           <textarea
-            rows={6}
-            className="bg-transparent border-b-2 border-b-black outline-none resize-none"
+            rows={10}
             name="user_message"
+            className="bg-transparent border-b-2 border-b-black outline-none resize-none p-2 focus:border-blue-500"
+            placeholder="Write your message here..." // Add placeholder for better UX
+            required // Make this field required for validation
+            style={{ paddingBottom: "50px" }}
           />
-          <span>My e-mail address is:</span>
+          <span>E-mail address:</span>
           <input
             name="user_email"
-            type="text"
-            className="bg-transparent border-b-2 border-b-black outline-none"
+            type="email" // Set type to email for validation
+            className="bg-transparent border-b-2 border-b-black outline-none p-2 focus:border-blue-500"
+            placeholder="Your email address..."
+            required // Make this field required
           />
           <span>Regards</span>
-          <button className="bg-purple-200 rounded font-semibold text-gray-600 p-4">
+          <button className="bg-purple-200 rounded font-semibold text-gray-600 p-4 hover:bg-purple-300 transition">
             Send
           </button>
           {success && (
