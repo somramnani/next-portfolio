@@ -39,3 +39,6 @@ next-env.d.ts
 # personal files
 NOTES.md
 notes.html
+
+# pages
+/src/app/portfolio/page-old.jsx
