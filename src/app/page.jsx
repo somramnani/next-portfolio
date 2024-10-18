@@ -12,7 +12,7 @@ const Homepage = () => {
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
-      <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
+      <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 overflow-scroll">
         {/* Image container */}
         <div className="h-1/2 lg:h-full lg:w-1/2 relative">
           <Image
@@ -25,7 +25,7 @@ const Homepage = () => {
         {/* Text container */}
         <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center">
           {/* Title */}
-          <h1 className="text-4xl md:text-6xl font-bold">Welcome</h1>
+          <h1 className="text-4xl md:text-6xl font-bold pt-15">Welcome</h1>
           <p className="md:text-xl">
             Hey! My name is Som and I am a Front End Developer. I have an
             associate's degree in web development and have also gone to the
