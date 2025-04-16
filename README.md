@@ -6,7 +6,7 @@
 
 Portfolio site built with Next.js and TailwindCSS. Visit here: https://www.somramnani.com/
 
-![Homepage](/homepage.png)
+![Homepage](public/homepage.png)
 
 ## 🛠️ Technologies
 
