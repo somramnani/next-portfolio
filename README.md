@@ -9,22 +9,36 @@ Portfolio site built with Next.js and TailwindCSS. Visit here: https://www.somra
 ![Homepage](public/homepage.png)
 
 ## 🛠️ Technologies
-
-- Node.js
 - Next.js
 - TailwindCSS
 - Vercel
 
-## Getting Started
+## ✨ Features
 
-First, run the development server:
+- Smooth scroll navigation
+- Animated project cards with Framer Motion
+- Responsive layout for mobile and desktop
+- Project showcase section
+
+
+## 🚀 Getting Started
+
+Clone the repo:
+
+```bash
+git clone https://github.com/somramnani/next-portfolio
+cd next-portfolio
+```
+Install dependencies
+
+```bash
+npm install
+```
+
+Start the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+
+Visit: http://localhost:3000
