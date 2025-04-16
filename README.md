@@ -9,7 +9,7 @@ Portfolio site built with Next.js and TailwindCSS. Visit here: https://www.somra
 ![Homepage](public/homepage.png)
 
 ## 🛠️ Technologies
-
+- React
 - Next.js
 - TailwindCSS
 - Vercel
