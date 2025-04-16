@@ -21,6 +21,10 @@ Portfolio site built with Next.js and TailwindCSS. Visit here: https://www.somra
 - Responsive layout for mobile and desktop
 - Project showcase section
 
+## 🎯 Lighthouse Score
+
+![Lighthouse Score](public/Lighthouse-score.png)
+
 ## 🚀 Getting Started
 
 Clone the repo:
