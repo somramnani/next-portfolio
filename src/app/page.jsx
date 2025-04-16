@@ -28,7 +28,7 @@ const Homepage = () => {
           <h1 className="text-4xl md:text-6xl font-bold pt-15">Welcome</h1>
           <p className="md:text-xl">
             Hey! My name is Som and I am a Front End Developer. I have an
-            associate's degree in web development and have also gone to the
+            Associate's Degree in Web Development and have also gone to the
             Rutgers Coding Bootcamp. I am currently a fellow at Formation which
             is a competitive engineering Fellowship.
           </p>
