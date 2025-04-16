@@ -115,7 +115,7 @@ const Navbar = () => {
           />
         </Link>
         <Link
-          href="https://olive-evania-12.tiiny.site"
+          href="https://somramnani2025resume.tiiny.site"
           target="_blank"
           rel="noopener noreferrer"
         >
