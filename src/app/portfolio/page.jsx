@@ -90,8 +90,6 @@ const PortfolioPage = () => {
       <div className="h-full overflow-scroll lg:flex">
         <div className="w-screen min-h-screen p-8 flex flex-col gap-8 ">
           <h1 className="text-center text-6xl font-bold mb-12">Projects</h1>
-
-          {/* Loop through each project */}
           {items.map((item) => (
             <div
               key={item.id}
@@ -107,7 +105,6 @@ const PortfolioPage = () => {
                   className="rounded-lg object-cover"
                 />
               </div>
-
               {/* Right side: Info */}
               <div className="flex flex-col justify-center w-full md:w-1/2">
                 <h2 className="text-3xl font-bold text-gray-800 mb-4">
@@ -144,15 +141,12 @@ const PortfolioPage = () => {
                 <div className="flex gap-4">
                   <Link href={item.github} target="_blank">
                     <button className="px-4 py-2 bg-gray-800 text-white rounded flex items-center gap-2">
-                      <FaGithub className="w-5 h-5" />{" "}
-                      {/* Adjust the icon size */}
-                      <span> GitHub</span>{" "}
-                      {/* Text will align next to the icon */}
+                      <FaGithub className="w-5 h-5" /> <span> GitHub</span>{" "}
                     </button>
                   </Link>
                   <Link href={item.link} target="_blank">
                     <button className="px-4 py-2 bg-blue-500 text-white rounded flex items-center gap-2">
-                      <FaGlobe className="w-5 h-5" /> {/* Globe Icon */}
+                      <FaGlobe className="w-5 h-5" />
                       <span> Website</span>
                     </button>
                   </Link>
