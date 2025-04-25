@@ -1,7 +1,7 @@
 "use client";
 import Brain from "@/components/brain";
 import { motion, useInView, useScroll } from "framer-motion";
-import Image from "next/image";
+
 import { useRef } from "react";
 
 const AboutPage = () => {
@@ -10,7 +10,6 @@ const AboutPage = () => {
   const { scrollYProgress } = useScroll({ container: containerRef });
 
   const skillRef = useRef();
-  // const isSkillRefInView = useInView(skillRef, {once:true});
   const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
 
   const experienceRef = useRef();
