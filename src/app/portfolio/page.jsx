@@ -91,9 +91,13 @@ const PortfolioPage = () => {
         <div className="w-screen min-h-screen p-8 flex flex-col gap-8 ">
           <h1 className="text-center text-6xl font-bold mb-12">Projects</h1>
           {items.map((item) => (
-            <div
+            <motion.div
               key={item.id}
               className="flex flex-col md:flex-row bg-white shadow-lg rounded-lg p-8 gap-8"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: false, amount: 0.3 }}
             >
               {/* Left side: Image */}
               <div className="w-full md:w-1/2">
@@ -152,7 +156,7 @@ const PortfolioPage = () => {
                   </Link>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
