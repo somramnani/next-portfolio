@@ -144,15 +144,23 @@ const PortfolioPage = () => {
 
                 <div className="flex gap-4">
                   <Link href={item.github} target="_blank">
-                    <button className="px-4 py-2 bg-gray-800 text-white rounded flex items-center gap-2">
-                      <FaGithub className="w-5 h-5" /> <span> GitHub</span>{" "}
-                    </button>
+                    <motion.button
+                      whileHover={{ scale: 1.05, backgroundColor: "#4B5563" }} // Tailwind's gray-700
+                      transition={{ type: "spring", stiffness: 300 }}
+                      className="px-4 py-2 bg-gray-800 text-white rounded flex items-center gap-2"
+                    >
+                      <FaGithub className="w-5 h-5" /> <span> GitHub</span>
+                    </motion.button>
                   </Link>
                   <Link href={item.link} target="_blank">
-                    <button className="px-4 py-2 bg-blue-500 text-white rounded flex items-center gap-2">
+                    <motion.button
+                      whileHover={{ scale: 1.05, backgroundColor: "#2563EB" }} // Tailwind's blue-600
+                      transition={{ type: "spring", stiffness: 300 }}
+                      className="px-4 py-2 bg-blue-500 text-white rounded flex items-center gap-2"
+                    >
                       <FaGlobe className="w-5 h-5" />
                       <span> Website</span>
-                    </button>
+                    </motion.button>
                   </Link>
                 </div>
               </div>
