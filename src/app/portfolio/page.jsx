@@ -123,13 +123,13 @@ const PortfolioPage = () => {
                     <div className="flex flex-wrap gap-2 items-center">
                       {item.tech.map((tech, index) => (
                         <div
-                          className="w-[130px] h-[40px] flex items-center justify-center"
+                          className=" h-[40px] flex items-center justify-center"
                           key={index}
                         >
                           <Image
                             src={tech.icon}
                             alt={tech.name}
-                            className="h-12 min-w-[120px] object-contain"
+                            className="h-12 object-contain"
                             width={100}
                             height={40}
                             title={tech.name}
