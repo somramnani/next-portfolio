@@ -4,7 +4,7 @@ import { motion, useInView, useScroll } from "framer-motion";
 
 import { useRef } from "react";
 
-const AboutPage = () => {
+const AboutSection = () => {
   const containerRef = useRef();
 
   const { scrollYProgress } = useScroll({ container: containerRef });
@@ -303,4 +303,4 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export default AboutSection;
