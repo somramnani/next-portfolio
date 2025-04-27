@@ -1,9 +1,10 @@
-import WelcomeSection from "@/components/sections/WelcomeSection";
+import { WelcomeSection, AboutSection } from "@/components/sections";
 
 const Homepage = () => {
   return (
     <main className="min-h-screen">
       <WelcomeSection />
+      <AboutSection />
     </main>
   );
 };
