@@ -1,3 +1,3 @@
-export { default as AboutSection } from "./AboutSection";
-export { default as WelcomeSection } from "./WelcomeSection";
-// export { default as PortfolioSection } from "./PortfolioSection";
+export { default as AboutSection } from "./AboutSection/index";
+export { default as WelcomeSection } from "./WelcomeSection/index";
+export { default as PortfolioSection } from "./PortfolioSection/index";
